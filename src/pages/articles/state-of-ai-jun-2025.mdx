@@ -1,0 +1,87 @@
+---
+title: State of AI - June 2025
+date: 2025-06-08
+description: A summary of the state of AI as of June 2025
+---
+
+# State of AI - June 2025
+
+We're living through one of those moments where the gap between what's promised and what's delivered has never been wider. On one hand, [OpenAI's o3 reasoning model hits 69.1% on SWE-bench Verified](https://techcrunch.com/2025/04/16/openai-launches-a-pair-of-ai-reasoning-models-o3-and-o4-mini/) and [robotics companies are shipping thousands of commercial humanoids](https://www.figure.ai/news/botq). On the other, **76,440 workers have lost jobs to AI automation** this year while most companies report seeing minimal productivity gains from their AI investments.
+
+But here's what's really happening behind the headlines: we're not even experiencing the AI we think we are.
+
+## The Reality Gap: Are We Testing the Same AI We're Using?
+
+The most underreported story in AI isn't about model capabilities—it's about what users actually get access to. During peak hours, cloud providers are almost certainly serving quantized versions of their flagship models, yet there's zero transparency about this. You think you're using "GPT-4" or "Claude Opus," but you might be getting a compressed version that performs significantly worse.
+
+This creates a fascinating paradox. While [Google's Gemini 2.5 Pro achieves a dominant 1415 ELO score on WebDev Arena](https://blog.google/technology/google-deepmind/google-gemini-updates-io-2025/) and [xAI's Grok 3 trains with 10x more compute using a 200,000+ GPU supercluster](https://x.ai/news/grok-3), practical users find that Claude 3.5 Sonnet—technically an "older" model—remains the most reliable coding companion for actual work.
+
+This isn't just about performance inconsistency. It reveals fundamental supply constraints that companies aren't discussing publicly. The AI infrastructure simply can't handle the demand we're placing on it, so providers quietly degrade service quality rather than admit limitations.
+
+## Apple's Outsider Advantage
+
+Which brings us to perhaps the most important research of 2025: [Apple's "The Illusion of Thinking" study](https://machinelearning.apple.com/research/illusion-of-thinking). Here's a company with minimal LLM expertise delivering the most systematic takedown of reasoning models just as the industry celebrates their breakthrough.
+
+The timing is suspicious, but the methodology is sound. Apple tested frontier models including OpenAI's o3-mini across controlled puzzle environments and found that **reasoning models reduce thinking effort as complexity increases**—exactly opposite to human behavior. They identify three performance regimes: low-complexity tasks where standard models outperform reasoning models, medium-complexity scenarios showing advantages, and high-complexity problems where both fail completely.
+
+Apple's outsider status might actually make this research more credible. They have less investment in the reasoning model hype cycle and fewer incentives to oversell capabilities. When a company that builds hardware says your software doesn't work as advertised, that's worth paying attention to.
+
+## The Investment Frenzy Meets Cold Reality
+
+The numbers are staggering. [AI startups consumed $59.6 billion of the $113 billion in global VC funding in Q1](https://news.crunchbase.com/venture/global-funding-strong-q1-2025-ai-data/)—over half of all investment globally. [OpenAI raised $40 billion at a $300 billion valuation](https://openai.com/index/march-funding-updates/), the largest private round in history.
+
+But here's what's not being discussed enough: the revenue isn't following the investment. [Sequoia Capital asks "Where is all the revenue?"](https://www.sequoiacap.com/article/ais-600b-question/) while [Goldman Sachs analysts wait for the AI bubble to burst](https://www.bloomberg.com/news/articles/2024-07-18/goldman-s-top-stock-analyst-is-waiting-for-ai-bubble-to-burst). OpenAI would need to charge users nearly triple current rates to achieve profitability at scale.
+
+Meanwhile, **DeepSeek trained competitive models for $6 million** while Western competitors spend hundreds of millions. This isn't just about efficiency—it questions the entire capital-intensive scaling approach the industry has bet on.
+
+The enterprise adoption statistics tell a sobering story: **78% of organizations use AI in at least one function, but only 1% describe their GenAI rollouts as mature**. Most companies report **less than 10% cost reductions and less than 5% revenue increases** from AI implementation despite massive investments.
+
+## The Coding Revolution That Isn't Quite Revolutionary Yet
+
+Software development is experiencing its biggest transformation since IDEs, but the reality is more nuanced than the hype suggests. [GitHub Copilot's Coding Agent](https://github.blog/changelog/2025-05-19-github-copilot-coding-agent-in-public-preview/) can now autonomously handle GitHub issues and create complete pull requests. [Cursor AI's valuation surged to $9 billion](https://techcrunch.com/2025/06/05/cursors-anysphere-nabs-9-9b-valuation-soars-past-500m-arr/) as developers embrace AI-native tools.
+
+**Y Combinator reported 25% of W25 startup codebases were almost entirely AI-generated**, and [Reid Hoffman successfully cloned LinkedIn using Replit Agent V2](https://www.linkedin.com/posts/reidhoffman_i-asked-replit-to-clone-linkedin-just-activity-7313967729496018944-WLk1) in a live demonstration.
+
+Yet studies consistently show that popular tools like GitHub Copilot don't measurably increase developer productivity despite heavy promotion. The gap between demo magic and daily utility remains significant. **76% of developers use or plan to use AI coding tools**, but the actual productivity gains are harder to quantify than the marketing suggests.
+
+## The Job Displacement Acceleration
+
+The abstract becomes concrete when we look at employment data. [TrueUp's crowd-sourced tracker counts approximately 76,000 tech layoffs citing AI](https://www.linkedin.com/pulse/linkedin-2025-engineering-layoffs-signal-microsofts-bold-anshuman-jha-wr9nc) so far this year—an average of 513 people daily. IBM's AskHR system now handles **11.5 million interactions annually**, replacing entire HR department functions.
+
+The robotics industry is moving from proof-of-concept to commercial deployment. [Figure AI plans to ship 100,000 humanoids over four years](https://www.figure.ai/news/botq) from their new BotQ facility, while [DHL committed to deploying 1,000+ additional Stretch robots by 2030](https://group.dhl.com/en/media-relations/press-releases/2025/dhl-group-signs-mou-with-boston-dynamics-and-accelerates-cross-business-automation-strategy.html).
+
+[The World Economic Forum projects 92 million jobs displaced by 2030 but 170 million new jobs emerging](https://www.weforum.org/press/2025/01/future-of-jobs-report-2025-78-million-new-job-opportunities-by-2030-but-urgent-upskilling-needed-to-prepare-workforces/). However, **77% of new AI jobs require master's degrees**, creating a skills gap that could exacerbate inequality rather than solve it.
+
+## Safety Research Falls Further Behind
+
+Perhaps the most concerning trend is how safety research struggles to match the pace of capability development. [Oxford analysis finds only 1-3% of AI publications concern safety](https://www.ox.ac.uk/news/2024-05-20-world-leaders-still-need-wake-ai-risks-say-leading-experts-ahead-ai-safety-summit), and resource allocation follows similar patterns.
+
+[Anthropic activated ASL-3 deployment standards](https://www.anthropic.com/news/activating-asl3-protections) for Claude Opus 4, implementing over 100 security measures. But the dissolution of OpenAI's Superalignment team amid reported resource constraints highlights industry tensions between safety and product development.
+
+The [International Network of AI Safety Institutes convened in San Francisco with $11+ million in funding commitments](https://www.techrepublic.com/article/international-network-ai-safety-institutes-meeting/), while [the EU AI Act's key provisions took effect in February 2025](https://digital-strategy.ec.europa.eu/en/news/first-rules-artificial-intelligence-act-are-now-applicable). Yet these governance efforts feel reactive rather than proactive, always chasing capabilities rather than anticipating them.
+
+## Technical Breakthroughs Point Toward Something Big
+
+Despite all the skepticism, the technical advances are genuinely impressive. [Google's Titans architecture achieves 15% lower perplexity than GPT-3](https://arxiv.org/html/2501.00663v1) while handling sequences over 2 million tokens. [MIT's Linear Oscillatory State-Space Models outperformed existing architectures by nearly 2x in extreme-length sequence tasks](https://news.mit.edu/2025/novel-ai-model-inspired-neural-dynamics-from-brain-0502).
+
+**NVIDIA's Blackwell architecture** delivered unprecedented performance with the RTX 5090 achieving **3,352 AI TOPS** and **5,841 tokens/second**—outperforming the A100 by 2.6x. The chip market reached **$71.3 billion in 2024** with 30% growth expected in 2025.
+
+AGI timeline predictions converge around 2025-2030, with **Sam Altman maintaining 2025 predictions** for human-level reasoning and **Dr. Alan Thompson's AGI tracker indicating 56% capability achievement**. Whether these predictions prove accurate depends heavily on how we define and measure "intelligence."
+
+## The Infrastructure Reality Check
+
+The shift toward edge computing reflects growing recognition of cloud limitations. [75% of data processing moves to edge locations](https://www.forbes.com/councils/forbestechcouncil/2024/12/12/2025-it-infrastructure-trends-the-edge-computing-hci-and-ai-boom/) by 2025, driven partly by the quantization and reliability issues plaguing cloud AI services.
+
+[Google's experimental app enabling direct AI model download and device execution](https://techcrunch.com/2025/05/31/google-quietly-released-an-app-that-lets-you-download-and-run-ai-models-locally/) represents a philosophical shift toward privacy-first, local model execution. This isn't just about privacy—it's about ensuring consistent access to the AI capabilities you think you're getting.
+
+## What This All Means
+
+We're at an inflection point where technical capabilities are advancing faster than our ability to deploy them effectively or understand their implications. The gap between laboratory demonstrations and practical utility remains significant, while the disconnect between investment enthusiasm and revenue generation suggests a market correction may be inevitable.
+
+The most honest assessment might be that we're simultaneously overestimating AI's immediate practical impact while underestimating its long-term transformative potential. Current models show remarkable capabilities in controlled environments but struggle with the messiness of real-world deployment.
+
+The quantization issue exemplifies this broader theme: we're not even experiencing the AI we think we are, making it impossible to accurately assess where we actually stand. Until we have transparency about what AI systems we're actually using—and consistency in their performance—the gap between perception and reality will continue to widen.
+
+The question isn't whether AI will transform everything eventually. It's whether the current approach—massive capital investment, rushing to market, and iterating through deployment—is the optimal path toward beneficial AI systems. The evidence suggests we might need to slow down and think more carefully about what we're building and how we're building it.
+
+But with [trillions of dollars invested](https://siliconangle.com/2025/04/03/global-vc-funding-hits-113-billion-first-quarter-driven-outsized-ai-deals/) and entire industries betting their futures on AI transformation, slowing down might not be an option anymore. We're committed to this path, for better or worse.

@@ -1,0 +1,43 @@
+{
+	"name": "humanity2030.github.io",
+	"version": "1.0.0",
+	"license": "CC-BY-SA-4.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
+	"devDependencies": {
+		"@mdx-js/preact": "3.1.0",
+		"@mdx-js/rollup": "3.1.0",
+		"@preact/preset-vite": "2.10.1",
+		"@tailwindcss/vite": "4.1.8",
+		"@types/node": "22.15.30",
+		"@unhead/addons": "^2.0.10",
+		"chokidar": "4.0.3",
+		"front-matter": "4.0.2",
+		"remark-frontmatter": "5.0.0",
+		"remark-mdx-frontmatter": "5.2.0",
+		"tailwindcss": "4.1.8",
+		"tw-animate-css": "^1.3.4",
+		"typescript": "5.8.3",
+		"vite": "6.3.5"
+	},
+	"dependencies": {
+		"@unhead/dom": "2.0.10",
+		"@unhead/react": "2.0.10",
+		"@unhead/ssr": "^2.0.10",
+		"class-variance-authority": "0.7.1",
+		"clsx": "2.1.1",
+		"lean-qr": "2.5.0",
+		"lucide-react": "0.513.0",
+		"preact": "10.26.8",
+		"preact-iso": "2.9.2",
+		"preact-render-to-string": "6.5.13",
+		"react": "npm:@preact/compat",
+		"react-dom": "npm:@preact/compat",
+		"tailwind-merge": "3.3.0"
+	}
+}
