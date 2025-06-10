@@ -38,6 +38,6 @@
 		"preact-render-to-string": "6.5.13",
 		"react": "npm:@preact/compat",
 		"react-dom": "npm:@preact/compat",
-		"tailwind-merge": "3.3.0"
+		"tailwind-merge": "3.3.1"
 	}
 }
