@@ -14,7 +14,7 @@
 		"@mdx-js/rollup": "3.1.0",
 		"@preact/preset-vite": "2.10.1",
 		"@tailwindcss/vite": "4.1.8",
-		"@types/node": "22.15.30",
+		"@types/node": "22.15.31",
 		"@unhead/addons": "^2.0.10",
 		"chokidar": "4.0.3",
 		"front-matter": "4.0.2",
