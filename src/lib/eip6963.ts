@@ -6,7 +6,10 @@ export interface EIP6963ProviderInfo {
 }
 
 export interface EIP1193Provider {
-  request: (request: { method: string; params?: any[] }) => Promise<any>;
+  request: (request: {
+    method: string;
+    params?: unknown[];
+  }) => Promise<unknown>;
 }
 
 export interface EIP6963ProviderDetail {
@@ -23,4 +26,4 @@ declare global {
   interface WindowEventMap {
     "eip6963:announceProvider": EIP6963AnnounceProviderEvent;
   }
-} 
+}

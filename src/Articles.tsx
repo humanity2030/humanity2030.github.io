@@ -1,5 +1,6 @@
-import { getAllPages } from "@/utils/pages";
 import { usePageMeta } from "@/utils/metadata";
+import { type Page, getAllPages } from "@/utils/pages";
+import { ArrowRight } from "lucide-react";
 
 interface ArticleItem {
   slug: string;
@@ -10,21 +11,22 @@ interface ArticleItem {
 
 export const Articles = () => {
   usePageMeta({
-    title: 'Articles',
-    description: 'Insights and analysis on AI alignment, safety, and the future of humanity',
+    title: "Articles",
+    description:
+      "Insights and analysis on AI alignment, safety, and the future of humanity",
   });
 
   const allPages = getAllPages();
-  const articles = allPages.filter((page: any) => 
-    page.slug.startsWith('articles/')
+  const articles = allPages.filter((page: Page) =>
+    page.slug.startsWith("articles/"),
   ) as ArticleItem[];
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
+    return date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
     });
   };
 
@@ -33,7 +35,8 @@ export const Articles = () => {
       <div className="mb-8">
         <h1>Articles</h1>
         <p>
-          Insights and analysis on AI alignment, safety, and the future of humanity.
+          Insights and analysis on AI alignment, safety, and the future of
+          humanity.
         </p>
       </div>
 
@@ -44,47 +47,31 @@ export const Articles = () => {
       ) : (
         <div className="space-y-8">
           {articles.map((article) => (
-            <article 
+            <article
               key={article.slug}
               className="border-b pb-8 last:border-b-0 last:pb-0"
             >
-              <time 
+              <time
                 dateTime={article.date}
                 className="text-sm text-muted-foreground"
               >
                 {formatDate(article.date)}
               </time>
-              
+
               <h2 className="text-2xl font-semibold mt-2 mb-3">
-                <a href={`/${article.slug}.html`}>
-                  {article.title}
-                </a>
+                <a href={`/${article.slug}.html`}>{article.title}</a>
               </h2>
-              
+
               {article.description && (
-                <p className="mb-4">
-                  {article.description}
-                </p>
+                <p className="mb-4">{article.description}</p>
               )}
-              
-              <a 
+
+              <a
                 href={`/${article.slug}.html`}
                 className="inline-flex items-center text-primary"
               >
                 Read article
-                <svg 
-                  className="ml-2 w-4 h-4" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M9 5l7 7-7 7" 
-                  />
-                </svg>
+                <ArrowRight className="ml-2 w-4 h-4" />
               </a>
             </article>
           ))}
@@ -92,4 +79,4 @@ export const Articles = () => {
       )}
     </>
   );
-}; 
+};

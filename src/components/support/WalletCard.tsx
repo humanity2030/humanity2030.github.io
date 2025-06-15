@@ -1,10 +1,10 @@
+import { WalletConnector } from "@/components/support/WalletConnector";
+import type { WalletCardProps } from "@/lib/types";
+import { getTokenSuggestions } from "@/utils/donations";
 import { generate } from "lean-qr";
 import { makeAsyncComponent } from "lean-qr/extras/react";
 import { createElement } from "preact";
 import * as hooks from "preact/hooks";
-import { WalletCardProps } from "@/lib/types";
-import { getTokenSuggestions } from "@/utils/donations";
-import { WalletConnector } from "@/components/support/WalletConnector";
 
 const QR = makeAsyncComponent({ createElement, ...hooks }, generate);
 
@@ -34,6 +34,7 @@ export const WalletCard = ({ currency, wallet }: WalletCardProps) => {
           {wallet.hasWalletSupport && (
             <div className="flex gap-2">
               <button
+                type="button"
                 onClick={() => setShowManual(!showManual)}
                 className="bg-white/20 hover:bg-white/30 text-white px-3 py-1 rounded text-sm transition-all"
               >
@@ -74,12 +75,14 @@ export const WalletCard = ({ currency, wallet }: WalletCardProps) => {
 
             <div className="flex gap-2">
               <button
+                type="button"
                 onClick={() => setShowQR(!showQR)}
                 className="bg-slate-700/50 hover:bg-slate-600/50 text-slate-300 px-3 py-2 rounded text-sm transition-all"
               >
                 {showQR ? "Hide QR" : "Show QR"}
               </button>
               <button
+                type="button"
                 onClick={copyToClipboard}
                 className="bg-slate-700/50 hover:bg-slate-600/50 text-slate-300 px-3 py-2 rounded text-sm transition-all"
               >
@@ -106,4 +109,4 @@ export const WalletCard = ({ currency, wallet }: WalletCardProps) => {
       </div>
     </div>
   );
-}; 
+};

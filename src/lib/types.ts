@@ -20,4 +20,4 @@ export type WalletConnectorProps = {
 export interface WalletCardProps {
   currency: string;
   wallet: WalletConfig;
-} 
+}

@@ -1,4 +1,4 @@
-import { WalletConfig } from "@/lib/types";
+import type { WalletConfig } from "@/lib/types";
 
 export const wallets: Record<string, WalletConfig> = {
   ETH: {
@@ -30,4 +30,4 @@ export const wallets: Record<string, WalletConfig> = {
     color: "from-yellow-400 to-yellow-600",
     hasWalletSupport: false,
   },
-}; 
+};

@@ -1,6 +1,6 @@
 export const getTokenSuggestions = (
   currency: string,
-  selectedToken?: string
+  selectedToken?: string,
 ) => {
   const token = selectedToken || currency;
 
@@ -25,4 +25,4 @@ export const getTokenSuggestions = (
   }
 
   return null;
-}; 
+};

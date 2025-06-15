@@ -82,7 +82,12 @@
   }
 
   /* Headings */
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply scroll-m-20;
   }
 
@@ -116,7 +121,7 @@
     @apply text-sm font-semibold tracking-tight md:text-base;
     @apply mt-6 mb-4 first:mt-0;
   }
-  
+
   /* Body text */
   p {
     @apply text-base leading-7;
@@ -124,18 +129,34 @@
   }
 
   /* Handle heading following paragraph */
-  p + h1 { @apply mt-12; }
-  p + h2 { @apply mt-10; }
-  p + h3 { @apply mt-8; }
-  p + h4, p + h5, p + h6 { @apply mt-6; }
+  p + h1 {
+    @apply mt-12;
+  }
+  p + h2 {
+    @apply mt-10;
+  }
+  p + h3 {
+    @apply mt-8;
+  }
+  p + h4,
+  p + h5,
+  p + h6 {
+    @apply mt-6;
+  }
 
   /* Handle paragraph following heading */
-  h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+  h1 + p,
+  h2 + p,
+  h3 + p,
+  h4 + p,
+  h5 + p,
+  h6 + p {
     @apply mt-4;
   }
 
   /* Lists */
-  ul, ol {
+  ul,
+  ol {
     @apply my-6 ml-6 first:mt-0;
   }
 

@@ -1,8 +1,8 @@
-import * as hooks from "preact/hooks";
-import {
+import type {
   EIP6963AnnounceProviderEvent,
   EIP6963ProviderDetail,
 } from "@/lib/eip6963";
+import * as hooks from "preact/hooks";
 
 export const useWalletProviders = () => {
   const [providers, setProviders] = hooks.useState<EIP6963ProviderDetail[]>([]);
@@ -23,10 +23,10 @@ export const useWalletProviders = () => {
     return () => {
       window.removeEventListener(
         "eip6963:announceProvider",
-        handleAnnouncement
+        handleAnnouncement,
       );
     };
   }, []);
 
   return providers;
-}; 
+};

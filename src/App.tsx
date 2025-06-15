@@ -1,10 +1,11 @@
-import { LocationProvider, ErrorBoundary, Router, Route } from "preact-iso";
-import { Unhead, UnheadProvider } from "@unhead/react/client";
-import { pageComponents } from "@/utils/page-components";
+import { Articles } from "@/Articles";
 import { Home } from "@/Home";
 import { Layout } from "@/Layout";
 import { Support } from "@/Support";
-import { Articles } from "@/Articles";
+import { pageComponents } from "@/utils/page-components";
+import type { Unhead } from "@unhead/react/client";
+import { UnheadProvider } from "@unhead/react/client";
+import { ErrorBoundary, LocationProvider, Route, Router } from "preact-iso";
 
 export const App = (props: { head: Unhead }) => {
   return (

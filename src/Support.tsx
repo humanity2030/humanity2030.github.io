@@ -1,7 +1,7 @@
-import { HeartHandshakeIcon } from "lucide-react";
-import { usePageMeta } from "@/utils/metadata";
-import { wallets } from "@/lib/wallets";
 import { WalletCard } from "@/components/support/WalletCard";
+import { wallets } from "@/lib/wallets";
+import { usePageMeta } from "@/utils/metadata";
+import { HeartHandshakeIcon } from "lucide-react";
 
 export const Support = () => {
   usePageMeta({
