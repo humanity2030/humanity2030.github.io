@@ -29,7 +29,7 @@ export const pages = [
   },
   {
     slug: "articles/path-to-agi-architecture",
-    title: "The Path to AGI Architectures",
+    title: "The Path to AGI Architecture",
     date: "2025-06-13T00:00:00.000Z",
     description:
       "An AGI architecture for self-improvement based on the three layers of human knowledge: technology, science, and philosophy. Explores metacognition and safety.",

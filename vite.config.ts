@@ -5,10 +5,12 @@ import tailwindcss from "@tailwindcss/vite";
 import UnheadVite from "@unhead/addons/vite";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
-import { defineConfig } from "vite";
+import { defineConfig } from "vitest/config";
 import { feedGenerator } from "./plugins/feed-generator";
 import { pagesGenerator } from "./plugins/pages-generator";
 import { remarkRDFa } from "./plugins/remark-rdfa";
+
+const isTest = process.env.VITEST;
 
 export default defineConfig({
   base: "/",
@@ -36,5 +38,13 @@ export default defineConfig({
   build: {
     outDir: "dist",
     assetsDir: "assets",
+  },
+  test: {
+    globals: true,
+    environment: "happy-dom",
+    setupFiles: ["src/setupTests.ts"],
+    coverage: {
+      provider: "v8",
+    },
   },
 });

@@ -38,6 +38,9 @@ export function pagesGenerator() {
       await generatePages();
     },
     configureServer(server) {
+      if (process.env.VITEST || server.config.command !== "serve") {
+        return;
+      }
       const watcher = chokidar.watch("src/pages/**/*.mdx", {
         ignored: /node_modules/,
         persistent: true,
