@@ -6,6 +6,7 @@ interface ArticleItem {
   title: string;
   date: string;
   description: string;
+  wordCount: number;
 }
 
 const Hero = () => {
@@ -132,9 +133,8 @@ const LatestResearch = () => {
     });
   };
 
-  const getReadTime = (description: string) => {
-    const words = description.split(' ').length;
-    const readTime = Math.max(Math.ceil(words / 150), 1);
+  const getReadTime = (wordCount: number) => {
+    const readTime = Math.max(Math.ceil(wordCount / 200), 1);
     return `${readTime} min read`;
   };
 
@@ -153,7 +153,7 @@ const LatestResearch = () => {
             <p className="text-slate-400">No articles published yet.</p>
           </div>
         ) : (
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="flex flex-col gap-8">
             {articles.slice(0, 3).map((article, index) => (
               <article key={article.slug} className={`bg-slate-800/50 rounded-lg overflow-hidden border border-slate-700/50 hover:border-slate-600/50 transition-all group ${index === 0 ? 'md:col-span-2' : ''}`}>
                 {index === 0 && (
@@ -166,7 +166,7 @@ const LatestResearch = () => {
                   <div className="flex items-center gap-3 text-sm text-slate-400 mb-3">
                     <span>{formatDate(article.date)}</span>
                     <span>•</span>
-                    <span>{getReadTime(article.description)}</span>
+                    <span>{getReadTime(article.wordCount)}</span>
                   </div>
                   
                   <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-blue-400 transition-colors">

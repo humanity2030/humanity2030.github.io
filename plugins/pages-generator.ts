@@ -81,7 +81,7 @@ async function getAllMdxFiles(dir: string): Promise<string[]> {
     const files = await readdir(dir, { withFileTypes: true, recursive: true })
     return files
         .filter(file => file.isFile() && file.name.endsWith('.mdx'))
-        .map(file => join(file.path, file.name))
+        .map(file => join(file.parentPath, file.name))
 }
 
 async function generatePages() {
@@ -98,7 +98,12 @@ async function generatePages() {
             
             const slug = dir ? `${dir}/${name}` : name
             
-            const frontmatter = frontMatter(await readFile(filePath, 'utf-8'))?.attributes as Record<string, any>
+            const fileContent = await readFile(filePath, 'utf-8')
+            const parsed = frontMatter(fileContent)
+            const frontmatter = parsed?.attributes as Record<string, any>
+            const body = parsed?.body || ''
+
+            const wordCount = body.split(/\s+/).map(word => word.trim()).filter(word => /\w+/.test(word)).length
             if (!frontmatter || typeof frontmatter !== 'object') {
                 console.error(`No frontmatter found in ${filePath}`)
                 continue
@@ -109,6 +114,7 @@ async function generatePages() {
                 title: frontmatter.title || name,
                 date: frontmatter.date || new Date().toISOString(),
                 description: frontmatter.description || '',
+                wordCount,
                 ...frontmatter
             })
         }
@@ -142,7 +148,17 @@ export function getAllPageLinks() {
 }
 `
       
-        await writeFile('src/utils/pages.tsx', pagesCode)
+        const writeIfNeeded = async (filePath, newContent) => {
+            try {
+                const currentContent = await readFile(filePath, 'utf-8');
+                if (currentContent === newContent) return;
+            } catch (err) {
+                if (err.code !== 'ENOENT') throw err;
+            }
+            await writeFile(filePath, newContent);
+        }
+
+        await writeIfNeeded('src/utils/pages.tsx', pagesCode)
       
         const importsCode = `// Auto-generated - do not edit
 import { lazy } from 'preact-iso'
@@ -159,7 +175,7 @@ ${pages.map(page => `  '${page.slug}.html': ${componentName(page.slug)}`).join('
 }
 `
       
-        await writeFile('src/utils/page-components.tsx', importsCode)
+        await writeIfNeeded('src/utils/page-components.tsx', importsCode)
       
         console.log(`✅ Generated ${pages.length} pages`)
     } catch (error) {

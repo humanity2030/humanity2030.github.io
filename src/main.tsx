@@ -3,13 +3,13 @@ import { createHead } from '@unhead/ssr'
 import { App } from './App'
 import './styles.css'
 
-const head = createHead()
-
 if (typeof window !== 'undefined') {
+  const head = createHead()
   hydrate(<App head={head} />, document.getElementById('app')!)
 }
 
 export async function prerender(data?: any) {
+  const head = createHead()
   const result = await ssr(<App head={head} {...data} />)
   
   try {
@@ -37,6 +37,15 @@ export async function prerender(data?: any) {
         metaTags.forEach(tag => {
           if (tag) {
             elements.add({ type: 'meta', props: tag })
+          }
+        })
+      }
+      if (input.script) {
+        const scriptTags = Array.isArray(input.script) ? input.script : [input.script]
+        scriptTags.forEach(tag => {
+          if (tag) {
+            const { innerHTML, ...rest } = tag
+            elements.add({ type: 'script', props: { ...rest, children: innerHTML } })
           }
         })
       }

@@ -16,5 +16,5 @@ export const MDXLayout = ({ children }: MDXLayoutProps) => {
   
   usePageMeta(mdxMeta);
 
-  return <>{children}</>;
+  return <article vocab="http://schema.org/" typeof="Article">{children}</article>;
 }; 

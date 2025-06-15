@@ -1,5 +1,5 @@
 import { LocationProvider, ErrorBoundary, Router, Route } from "preact-iso";
-import { createHead, Unhead, UnheadProvider } from "@unhead/react/client";
+import { Unhead, UnheadProvider } from "@unhead/react/client";
 import { pageComponents } from "@/utils/page-components";
 import { Home } from "@/Home";
 import { Layout } from "@/Layout";
