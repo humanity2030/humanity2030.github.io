@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://humanity2030.github.io/sitemap.xml

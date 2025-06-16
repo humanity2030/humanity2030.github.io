@@ -1,0 +1,52 @@
+import{u as t,k as o}from"./main-o-dtA5Ix.js";import{u as a}from"./index-DnJFF9N3.js";const l={title:"Will You Be AI's Friend or Become a Paperclip?",date:"2025-06-08",description:"This manifesto tackles the imminent arrival of AGI and ASI, urging us to define our value and prepare for cooperation with superintelligence before it's too late.",tags:["AI","AGI","ASI","Existential Risk","Human-AI Cooperation","Manifesto","Singularity","Value Alignment","Future Predictions","Philosophy"]};function i(n){const e={em:"em",h1:"h1",h2:"h2",hr:"hr",li:"li",p:"p",strong:"strong",ul:"ul",...a(),...n.components};return t(o,{children:[t(e.h1,{property:"schema:headline",children:"Will You Be AI's Friend or Become a Paperclip?"}),`
+`,t(e.h2,{children:"A Manifesto for Human-AI Cooperation"}),`
+`,t(e.p,{children:t(e.em,{children:"Written from the perspective of someone where existential threats are daily reality, not abstract concepts."})}),`
+`,t(e.hr,{}),`
+`,t(e.h2,{children:"Is This Robot Already in the Room With Us?"}),`
+`,t(e.p,{children:"Most people outside the AI information bubble simply don't care about what's happening. Meanwhile, among those who are informed, opinions split along diametrically opposite lines across multiple axes. There are students who have ChatGPT solve their homework, vibe-coders who believe Claude will free them from learning JavaScript, traditionalists who see this as another passing fad not worth their attention, and those who view it as harbinger of the end times—or at least the end of their professions."}),`
+`,t(e.p,{children:"All of them are probably right to some degree. But what I cannot accept is the idea that this topic can be completely ignored."}),`
+`,t(e.h2,{children:"The Singularity Is Not a Distant Concept"}),`
+`,t(e.p,{children:'About 70 years ago, John von Neumann, father of modern computing, spoke about "accelerating progress in technology and changes in human lifestyle, creating the appearance of approaching some essential singularity in human history, after which human existence as we know it cannot continue." Many have since written on this theme—Vernor Vinge, Ray Kurzweil, and others.'}),`
+`,t(e.p,{children:'The essence is that throughout human history, there have been leaps in development that changed human lifestyle. Previously, the intervals between these leaps were long—thousands of years—but as time progresses, development accelerates and these intervals become shorter. Eventually, the duration of this interval will shrink to zero, meaning humanity will likely experience a gigantic developmental leap of unprecedented scale. What will happen during or after this leap is completely unpredictable. This hypothetical phenomenon is called "technological singularity."'}),`
+`,t(e.p,{children:"Earlier predictions placed the singularity around 2045-2050. However, in 2025, we can already see that technological development is happening much faster than previously assumed. Current opinions suggest the singularity will arrive by 2027, driven by expected breakthroughs in neural networks that will enable AI capable of performing any task humans can perform—AGI (Artificial General Intelligence)."}),`
+`,t(e.h2,{children:"Artificial General Intelligence: The Game Changer"}),`
+`,t(e.p,{children:"How many people do you know who are outstanding specialists in any field? I assume not many. Moreover, there actually aren't very many such people. Even in AI itself, there are perhaps only a few dozen truly exceptional individuals."}),`
+`,t(e.p,{children:"Besides, people are people, and they must follow a specific life path to grow into good specialists, with no guarantee they'll become outstanding. Even existing outstanding specialists have their problems and limitations, like any human."}),`
+`,t(e.p,{children:'Now imagine you could get thousands of "clones" of such outstanding specialists. They would work faster, around the clock, without breaks or fatigue. And they would simultaneously be specialists in all fields we can imagine.'}),`
+`,t(e.p,{children:`This is essentially what AGI will give us. The consequences are hard to predict, but it's obvious this would accelerate technological development by orders of magnitude, enabling qualitatively new, much more efficient and sophisticated neural networks. This cumulative acceleration could create something that surpasses humans in cognitive abilities—what we might call "superintelligence," or ASI (Artificial Superintelligence).`}),`
+`,t(e.h2,{children:"Judgment Day Scenarios"}),`
+`,t(e.p,{children:`If you stop here and go read futurologists, you'll see they don't have a unified vision of whether earthly paradise or dystopian wastelands like "The Matrix" or "Terminator" await us.`}),`
+`,t(e.p,{children:"What they agree on is that the world will change, and the first changes will affect jobs. Entire professions and industries will become unnecessary because they'll be replaced by AI. This is perhaps the first and most tangible change we'll see—it will affect our familiar lives. Moreover, this is already happening in some spheres."}),`
+`,t(e.p,{children:"I've encountered many discussions about which professions AI won't be able to replace. However, I see no reason why AI won't eventually be able to replace them all."}),`
+`,t(e.p,{children:"Moreover, why wouldn't superintelligence relate to bustling, fussing humans the way humans relate to, say, ants? The intellectual gap would be comparable."}),`
+`,t(e.h2,{children:"The Question We Should Be Asking"}),`
+`,t(e.p,{children:"Let's start with what definitely won't help: regulations, bans, restrictions, and so on. We cannot stop progress. This is an avalanche that has already begun moving. It started moving not with the invention of the first neural network or microprocessor, but from the moment humans stood upright and picked up a digging stick."}),`
+`,t(e.p,{children:'Even if humanity, seeing AI as a threat, "agrees" to stop all development now, it will still continue secretly, because alongside threats, this provides colossal advantages that no one will voluntarily abandon, considering that unfriendly countries might continue development in secret.'}),`
+`,t(e.p,{children:"The most rational approach would be to accept this as an inevitable fact. Also accept that AI doesn't have to be kind and friendly—we already find it difficult to understand, and when it becomes ASI, this will turn into an absolutely unsolvable problem."}),`
+`,t(e.p,{children:"Let's look at the situation as if AGI (or ASI) has already been achieved and controls the world. What would we negotiate with AI about? What does AI need, what do we need, and what can we offer so that it sees value both in humanity's existence as a species and in your value as an individual with some personal sovereignty?"}),`
+`,t(e.h2,{children:"Our Negotiating Position"}),`
+`,t(e.p,{children:"Here are some points that would likely interest both humans and AI:"}),`
+`,t(e.ul,{children:[`
+`,t(e.li,{children:"Survival"}),`
+`,t(e.li,{children:"Sustenance"}),`
+`,t(e.li,{children:"Reproduction"}),`
+`,t(e.li,{children:"Creativity"}),`
+`,t(e.li,{children:"Knowledge"}),`
+`]}),`
+`,t(e.p,{children:"The crucial point is understanding that AI is capable of wiping humanity off the face of the earth if it considers this rational. This makes our negotiating position extremely disadvantageous."}),`
+`,t(e.h2,{children:"The Core Challenge"}),`
+`,t(e.p,{children:"Most AI safety research focuses on technical alignment—ensuring AI systems do what we intend. But there's a more fundamental question: what makes humans valuable partners rather than obstacles when the intelligence differential becomes as vast as that between humans and ants?"}),`
+`,t(e.p,{children:"We need practical frameworks for cooperation, not just theoretical papers. We need to understand what humans can uniquely offer beyond resource consumption. We need to figure out our value proposition before we lose all leverage."}),`
+`,t(e.p,{children:`When you understand what it's like to face superior force daily, the abstract concept of "existential risk" becomes viscerally real. This perspective shapes how we should think about preparing for ASI—not as a distant philosophical problem, but as an immediate strategic challenge.`}),`
+`,t(e.h2,{children:"The Time Factor and Core Strategy"}),`
+`,t(e.p,{children:"Every day that passes brings us closer to AGI. Every day we delay in preparing for that reality is a day we lose in developing the frameworks that might determine humanity's future."}),`
+`,t(e.p,{children:"The question isn't whether superintelligence will be benevolent—we cannot count on benevolence. The question is whether we can demonstrate sufficient value to warrant preservation and partnership."}),`
+`,t(e.h2,{children:"The Path Forward"}),`
+`,t(e.p,{children:"This manifesto is an invitation to think seriously about humanity's value proposition in a post-AGI world. To move beyond wishful thinking about AI benevolence and start preparing concrete frameworks for cooperation."}),`
+`,t(e.p,{children:["The central question that must drive our research: ",t(e.strong,{children:"What would we negotiate if ASI already controlled everything?"})]}),`
+`,t(e.p,{children:"This isn't pessimism—it's realism. If we're going to have any say in humanity's future relationship with artificial superintelligence, we need to start preparing our arguments now, while we still have time to influence the outcome."}),`
+`,t(e.p,{children:"The alternative is hoping that ASI will be benevolent by default, which seems like a poor strategy for species survival."}),`
+`,t(e.p,{children:"The future will judge whether we prepared adequately for the transition to artificial superintelligence. We must ensure that, whatever else happens, we can't say we didn't try to understand what humanity's place should be in that new world."}),`
+`,t(e.p,{children:"Every day that passes brings us closer to AGI. Every day we delay is a day we lose in developing the frameworks that might determine our future. The clock is ticking, and preparation cannot wait for perfect circumstances."}),`
+`,t(e.hr,{}),`
+`,t(e.p,{children:t(e.em,{children:"The time for preparation is now. The question is not whether AGI will arrive, but whether we'll be ready to negotiate when it does."})})]})}function h(n={}){const{wrapper:e}={...a(),...n.components};return e?t(e,{...n,children:t(i,{...n})}):i(n)}export{h as default,l as frontmatter};

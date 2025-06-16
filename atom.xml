@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>Humanity 2030 Articles</title>
+<link href="https://humanity2030.github.io/articles/"/>
+<updated>2025-06-16T15:42:28.573Z</updated>
+<id>https://humanity2030.github.io/</id>
+<entry>
+<title>The Path to AGI Architecture</title>
+<link href="https://humanity2030.github.io/articles/path-to-agi-architecture.html"/>
+<id>https://humanity2030.github.io/articles/path-to-agi-architecture.html</id>
+<updated>2025-06-13T00:00:00.000Z</updated>
+<summary><![CDATA[An AGI architecture for self-improvement based on the three layers of human knowledge: technology, science, and philosophy. Explores metacognition and safety.]]></summary>
+</entry>
+<entry>
+<title>AI Consciousness: We're Arguing About the Wrong Thing</title>
+<link href="https://humanity2030.github.io/articles/we-arguing-about-wrong-thing.html"/>
+<id>https://humanity2030.github.io/articles/we-arguing-about-wrong-thing.html</id>
+<updated>2025-06-13T00:00:00.000Z</updated>
+<summary><![CDATA[An exploration of why the debate on whether AI can be 'truly conscious' is less important than preparing for AI that acts indistinguishably from conscious beings.]]></summary>
+</entry>
+<entry>
+<title>Will AI Be Anthropomorphic?</title>
+<link href="https://humanity2030.github.io/articles/will-ai-be-anthropomorphic.html"/>
+<id>https://humanity2030.github.io/articles/will-ai-be-anthropomorphic.html</id>
+<updated>2025-06-13T00:00:00.000Z</updated>
+<summary><![CDATA[AI will be born in our image, but it won't stay that way. An exploration of the dual nature of superintelligence.]]></summary>
+</entry>
+<entry>
+<title>State of AI - June 2025</title>
+<link href="https://humanity2030.github.io/articles/state-of-ai-jun-2025.html"/>
+<id>https://humanity2030.github.io/articles/state-of-ai-jun-2025.html</id>
+<updated>2025-06-08T00:00:00.000Z</updated>
+<summary><![CDATA[A summary of the state of AI as of June 2025]]></summary>
+</entry>
+</feed>

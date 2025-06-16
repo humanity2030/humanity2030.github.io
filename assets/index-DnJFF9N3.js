@@ -1,0 +1,1 @@
+import{x as t,K as n}from"./main-o-dtA5Ix.js";const e={},s=n(e);function c(o){return{...t(s),...o}}export{c as u};
