@@ -1,5 +1,6 @@
 import { usePageMeta } from "@/utils/metadata";
 import { type Page, getAllPages } from "@/utils/pages";
+import { calculateReadingTime } from "@/utils/reading-time";
 import { ArrowRight } from "lucide-react";
 
 interface ArticleItem {
@@ -7,6 +8,7 @@ interface ArticleItem {
   title: string;
   date: string;
   description: string;
+  wordCount: number;
 }
 
 export const Articles = () => {
@@ -51,12 +53,11 @@ export const Articles = () => {
               key={article.slug}
               className="border-b pb-8 last:border-b-0 last:pb-0"
             >
-              <time
-                dateTime={article.date}
-                className="text-sm text-muted-foreground"
-              >
-                {formatDate(article.date)}
-              </time>
+              <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                <time dateTime={article.date}>{formatDate(article.date)}</time>
+                <span>•</span>
+                <span>{calculateReadingTime(article.wordCount)}</span>
+              </div>
 
               <h2 className="text-2xl font-semibold mt-2 mb-3">
                 <a href={`/${article.slug}.html`}>{article.title}</a>

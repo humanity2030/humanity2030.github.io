@@ -1,6 +1,7 @@
 import { usePageMeta } from "@/utils/metadata";
 import { getAllPages } from "@/utils/pages";
 import type { Page } from "@/utils/pages";
+import { calculateReadingTime } from "@/utils/reading-time";
 
 interface ArticleItem {
   slug: string;
@@ -153,8 +154,7 @@ const LatestResearch = () => {
   };
 
   const getReadTime = (wordCount: number) => {
-    const readTime = Math.max(Math.ceil(wordCount / 200), 1);
-    return `${readTime} min read`;
+    return calculateReadingTime(wordCount);
   };
 
   return (
