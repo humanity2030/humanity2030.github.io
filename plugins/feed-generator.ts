@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 import type { Plugin } from "vite";
 import { pages, staticPages } from "../src/utils/pages";
 
-const SITE_URL = "https://humanity2030.org";
+const SITE_URL = "https://humanity2030.github.io";
 
 function getArticlePages() {
   return pages
@@ -61,10 +61,17 @@ function renderJsonFeed() {
   );
 }
 
+function renderRobotsTxt() {
+  return `User-agent: *
+Allow: /
+
+Sitemap: ${SITE_URL}/sitemap.xml`;
+}
+
 // Vite plugin: generates sitemap.xml, rss.xml, atom.xml, feed.json in dist/ after build
 export function feedGenerator(): Plugin {
   return {
-    name: "vite-plugin-feed-generator", // clear plugin name per convention
+    name: "vite-plugin-feed-generator",
     apply: "build", // only run during build
     // Use closeBundle for post-build file writing
     async closeBundle() {
@@ -88,8 +95,13 @@ export function feedGenerator(): Plugin {
         resolve(process.cwd(), "dist", "feed.json"),
         renderJsonFeed(),
       );
+      // Write robots.txt
+      await writeFile(
+        resolve(process.cwd(), "dist", "robots.txt"),
+        renderRobotsTxt(),
+      );
       console.log(
-        "✅ Generated sitemap.xml, rss.xml, atom.xml, feed.json in dist/",
+        "✅ Generated sitemap.xml, rss.xml, atom.xml, feed.json, robots.txt in dist/",
       );
     },
   };
