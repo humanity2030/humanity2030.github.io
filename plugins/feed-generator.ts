@@ -1,9 +1,8 @@
 import { writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import type { Plugin } from "vite";
+import { siteConfig } from "../src/utils/metadata";
 import { pages, staticPages } from "../src/utils/pages";
-
-const SITE_URL = "https://humanity2030.github.io";
 
 function getArticlePages() {
   return pages
@@ -15,11 +14,11 @@ function getAllPagesForSitemap() {
   // staticPages already includes .html in path, pages need .html
   return [
     ...pages.map((page) => ({
-      loc: `${SITE_URL}/${page.slug}.html`,
+      loc: `${siteConfig.url}/${page.slug}.html`,
       lastmod: page.date || new Date().toISOString(),
     })),
     ...staticPages.map((page) => ({
-      loc: `${SITE_URL}${page.path}`,
+      loc: `${siteConfig.url}${page.path}`,
       lastmod: new Date().toISOString(),
     })),
   ];
@@ -32,12 +31,12 @@ function renderSitemapXml() {
 
 function renderRssXml() {
   const articles = getArticlePages();
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0">\n<channel>\n<title>Humanity 2030 Articles</title>\n<link>${SITE_URL}/articles/</link>\n<description>Latest articles from Humanity 2030</description>\n${articles.map((a) => `<item>\n<title>${a.title}</title>\n<link>${SITE_URL}/${a.slug}.html</link>\n<guid>${SITE_URL}/${a.slug}.html</guid>\n<pubDate>${new Date(a.date).toUTCString()}</pubDate>\n<description><![CDATA[${a.description || ""}]]></description>\n</item>`).join("\n")}\n</channel>\n</rss>`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0">\n<channel>\n<title>${siteConfig.title} Articles</title>\n<link>${siteConfig.url}/articles/</link>\n<description>Latest articles from ${siteConfig.title}</description>\n${articles.map((a) => `<item>\n<title>${a.title}</title>\n<link>${siteConfig.url}/${a.slug}.html</link>\n<guid>${siteConfig.url}/${a.slug}.html</guid>\n<pubDate>${new Date(a.date).toUTCString()}</pubDate>\n<description><![CDATA[${a.description || ""}]]></description>\n</item>`).join("\n")}\n</channel>\n</rss>`;
 }
 
 function renderAtomXml() {
   const articles = getArticlePages();
-  return `<?xml version="1.0" encoding="utf-8"?>\n<feed xmlns="http://www.w3.org/2005/Atom">\n<title>Humanity 2030 Articles</title>\n<link href="${SITE_URL}/articles/"/>\n<updated>${new Date().toISOString()}</updated>\n<id>${SITE_URL}/</id>\n${articles.map((a) => `<entry>\n<title>${a.title}</title>\n<link href="${SITE_URL}/${a.slug}.html"/>\n<id>${SITE_URL}/${a.slug}.html</id>\n<updated>${new Date(a.date).toISOString()}</updated>\n<summary><![CDATA[${a.description || ""}]]></summary>\n</entry>`).join("\n")}\n</feed>`;
+  return `<?xml version="1.0" encoding="utf-8"?>\n<feed xmlns="http://www.w3.org/2005/Atom">\n<title>${siteConfig.title} Articles</title>\n<link href="${siteConfig.url}/articles/"/>\n<updated>${new Date().toISOString()}</updated>\n<id>${siteConfig.url}/</id>\n${articles.map((a) => `<entry>\n<title>${a.title}</title>\n<link href="${siteConfig.url}/${a.slug}.html"/>\n<id>${siteConfig.url}/${a.slug}.html</id>\n<updated>${new Date(a.date).toISOString()}</updated>\n<summary><![CDATA[${a.description || ""}]]></summary>\n</entry>`).join("\n")}\n</feed>`;
 }
 
 function renderJsonFeed() {
@@ -45,12 +44,12 @@ function renderJsonFeed() {
   return JSON.stringify(
     {
       version: "https://jsonfeed.org/version/1",
-      title: "Humanity 2030 Articles",
-      home_page_url: `${SITE_URL}/articles/`,
-      feed_url: `${SITE_URL}/feed.json`,
+      title: `${siteConfig.title} Articles`,
+      home_page_url: `${siteConfig.url}/articles/`,
+      feed_url: `${siteConfig.url}/feed.json`,
       items: articles.map((a) => ({
-        id: `${SITE_URL}/${a.slug}.html`,
-        url: `${SITE_URL}/${a.slug}.html`,
+        id: `${siteConfig.url}/${a.slug}.html`,
+        url: `${siteConfig.url}/${a.slug}.html`,
         title: a.title,
         content_text: a.description || "",
         date_published: a.date,
@@ -65,7 +64,29 @@ function renderRobotsTxt() {
   return `User-agent: *
 Allow: /
 
-Sitemap: ${SITE_URL}/sitemap.xml`;
+Sitemap: ${siteConfig.url}/sitemap.xml`;
+}
+
+function renderLlmsTxt() {
+  const articles = getArticlePages();
+  const recentArticles = articles.slice(0, 8); // Get the 8 most recent articles
+
+  return `# ${siteConfig.title}
+
+> ${siteConfig.description}
+
+## Key Pages
+
+- [Home](${siteConfig.url}/): Home page with latest updates
+- [Articles](${siteConfig.url}/articles/index.html): Complete collection of research articles and posts
+- [My Story](${siteConfig.url}/my-story.html): A brief story about my journey and why I'm doing this
+- [Manifesto](${siteConfig.url}/manifesto.html): Will you be AI's friend or become a paperclip? A manifesto for the project
+- [Support](${siteConfig.url}/support.html): Information about supporting this research and project
+
+## Recent Articles
+
+${recentArticles.map((article) => `- [${article.title}](${siteConfig.url}/${article.slug}.html): ${article.description || `Research article published ${article.date}`}`).join("\n")}
+`;
 }
 
 // Vite plugin: generates sitemap.xml, rss.xml, atom.xml, feed.json in dist/ after build
@@ -100,8 +121,13 @@ export function feedGenerator(): Plugin {
         resolve(process.cwd(), "dist", "robots.txt"),
         renderRobotsTxt(),
       );
+      // Write llms.txt
+      await writeFile(
+        resolve(process.cwd(), "dist", "llms.txt"),
+        renderLlmsTxt(),
+      );
       console.log(
-        "✅ Generated sitemap.xml, rss.xml, atom.xml, feed.json, robots.txt in dist/",
+        "✅ Generated sitemap.xml, rss.xml, atom.xml, feed.json, robots.txt, llms.txt in dist/",
       );
     },
   };

@@ -46,7 +46,20 @@ const Footer = () => {
   return (
     <footer className="border-t border-slate-700/50 backdrop-blur-sm bg-slate-900/50">
       <div className="max-w-4xl mx-auto px-6 py-4">
-        <div className="text-sm text-slate-400">2025</div>
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-sm text-slate-400">
+          <div>© 2025 Humanity 2030</div>
+          <div className="flex items-center gap-1">
+            <span>Licensed under</span>
+            <a
+              href="https://creativecommons.org/licenses/by/4.0/"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="text-blue-400 hover:text-blue-300 underline"
+            >
+              CC BY 4.0
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   );
