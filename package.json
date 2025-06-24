@@ -44,7 +44,7 @@
     "vitest": "3.2.3"
   },
   "dependencies": {
-    "@unhead/dom": "2.0.10",
+    "@unhead/dom": "2.0.11",
     "@unhead/react": "2.0.10",
     "@unhead/ssr": "^2.0.10",
     "class-variance-authority": "0.7.1",
