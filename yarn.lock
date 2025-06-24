@@ -535,10 +535,19 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
-"@rollup/pluginutils@^5.0.0", "@rollup/pluginutils@^5.1.4":
+"@rollup/pluginutils@^5.0.0":
   version "5.1.4"
   resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-5.1.4.tgz#bb94f1f9eaaac944da237767cdfee6c5b2262d4a"
   integrity sha512-USm05zrsFxYLPdWWq+K3STlWiT/3ELn3RcV5hJMghpeAIhxfsUIg6mt12CBJBInWMV4VneoV7SfGv8xIwo2qNQ==
+  dependencies:
+    "@types/estree" "^1.0.0"
+    estree-walker "^2.0.2"
+    picomatch "^4.0.2"
+
+"@rollup/pluginutils@^5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-5.2.0.tgz#eac25ca5b0bdda4ba735ddaca5fbf26bd435f602"
+  integrity sha512-qWJ2ZTbmumwiLFomfzTyt5Kng4hwPi9rwCYN4SHb6eaRU1KNO4ccxINHr/VhH4GgPlt1XfSTLX2LBTme8ne4Zw==
   dependencies:
     "@types/estree" "^1.0.0"
     estree-walker "^2.0.2"
@@ -900,16 +909,16 @@
   integrity sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==
 
 "@unhead/addons@^2.0.10":
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/@unhead/addons/-/addons-2.0.10.tgz#0d1ddd145632c358687d2e31dc6f9d4a22d917b5"
-  integrity sha512-9+w/m+X5e7CDKXKGTym1N4MpBjrRC89cfl95RDgKwBcFJfQ3pZu50llIjx/j462VqtrNMXddBKcUnfWvQyapuw==
+  version "2.0.11"
+  resolved "https://registry.yarnpkg.com/@unhead/addons/-/addons-2.0.11.tgz#f8217b0ada64f36daa803087d570a57ae74419d8"
+  integrity sha512-HPv7k5iWZ0Fo5HqR+5TVT6l/CfFLfTI0eUA8scIY4nU98XlzKYhftXYXHG5rf2N1CkSspziTNyEdfY/Bs9GjtQ==
   dependencies:
-    "@rollup/pluginutils" "^5.1.4"
+    "@rollup/pluginutils" "^5.2.0"
     estree-walker "^3.0.3"
     magic-string "^0.30.17"
     mlly "^1.7.4"
     ufo "^1.6.1"
-    unplugin "^2.3.4"
+    unplugin "^2.3.5"
     unplugin-ast "^0.15.0"
 
 "@unhead/dom@2.0.10":
@@ -3514,7 +3523,7 @@ unplugin-ast@^0.15.0:
     magic-string-ast "^0.9.1"
     unplugin "^2.3.2"
 
-unplugin@^2.3.2, unplugin@^2.3.4:
+unplugin@^2.3.2, unplugin@^2.3.5:
   version "2.3.5"
   resolved "https://registry.yarnpkg.com/unplugin/-/unplugin-2.3.5.tgz#c689d806e2a15c95aeb794f285356c6bcdea4a2e"
   integrity sha512-RyWSb5AHmGtjjNQ6gIlA67sHOsWpsbWpwDokLwTcejVdOjEkJZh7QKu14J00gDDVSh8kGH4KYC/TNBceXFZhtw==
