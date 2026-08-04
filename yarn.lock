@@ -917,12 +917,12 @@
   resolved "https://registry.yarnpkg.com/@unhead/dom/-/dom-2.0.10.tgz#1053c4dff7cda5f9fda3b96252cdde95f9e4b804"
   integrity sha512-00I1FFogvb2S2nLjSSpgVRWNuzPoST/mHXxSNddPTOVB9q3+VpTCdWYIhfQFXza1uhdsBioFqEC3nA2qmeUoiw==
 
-"@unhead/react@2.0.10":
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/@unhead/react/-/react-2.0.10.tgz#9484e7ed075546b1e69c24cb2c7c6a172f7b442c"
-  integrity sha512-U5tqhUYk4qmyLD8YpKOuYwWmbIGFpB7aacOzcGAhjJ59GH3W/BSFOFHj/6dcoYV5yzr1CZrINGGH7stRVMMLjQ==
+"@unhead/react@2.1.17":
+  version "2.1.17"
+  resolved "https://registry.yarnpkg.com/@unhead/react/-/react-2.1.17.tgz#09f0ee467d81c5d6c6f2d088d047b30fba8a4468"
+  integrity sha512-KmcYksDjlLozL0fxUjIDwH/0k6+Lg2HWHLUPlkRW8Gl08hdB1AbLB5iU9QxFvkaT8p0Q4dFEqZWnz3g6RMeiRA==
   dependencies:
-    unhead "2.0.10"
+    unhead "2.1.17"
 
 "@unhead/ssr@^2.0.10":
   version "2.0.10"
@@ -1868,6 +1868,11 @@ hookable@^5.5.3:
   version "5.5.3"
   resolved "https://registry.yarnpkg.com/hookable/-/hookable-5.5.3.tgz#6cfc358984a1ef991e2518cb9ed4a778bbd3215d"
   integrity sha512-Yc+BQe8SvoXH1643Qez1zqLRmbA5rCL+sSmk6TVos0LWVfNIB7PGncdlId77WzLGSIB5KaWgTaNTs2lNVEI6VQ==
+
+hookable@^6.0.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/hookable/-/hookable-6.1.1.tgz#825f966b4b426db2e622d94d7a31a70f196f9d2f"
+  integrity sha512-U9LYDy1CwhMCnprUfeAZWZGByVbhd54hwepegYTK7Pi5NvqEj63ifz5z+xukznehT7i6NIZRu89Ay1AZmRsLEQ==
 
 husky@9.1.7:
   version "9.1.7"
@@ -3432,6 +3437,13 @@ unhead@2.0.10:
   integrity sha512-GT188rzTCeSKt55tYyQlHHKfUTtZvgubrXiwzGeXg6UjcKO3FsagaMzQp6TVDrpDY++3i7Qt0t3pnCc/ebg5yQ==
   dependencies:
     hookable "^5.5.3"
+
+unhead@2.1.17:
+  version "2.1.17"
+  resolved "https://registry.yarnpkg.com/unhead/-/unhead-2.1.17.tgz#797c3e804ea199b4e20711a75a863c4b3368f67b"
+  integrity sha512-HLMKXOszRhAPBrr6VlqCeVeJq2kbC4kXwzGLEZvvojPLWNYTJw22xG7Bfwhsvs31+IBet3Wl8ADg9dwYdyphfQ==
+  dependencies:
+    hookable "^6.0.1"
 
 unified@^11.0.0:
   version "11.0.5"
