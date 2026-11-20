@@ -925,9 +925,9 @@
     unhead "2.0.10"
 
 "@unhead/ssr@^2.0.10":
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/@unhead/ssr/-/ssr-2.0.10.tgz#600e77d662c1c80857e6c398938a6c4c45a06d41"
-  integrity sha512-v3HsoH4VUHpC/DyfrO2O1mMd9dKcP5uhhbkhG3Yms5S5Kj4Qe3MVDduBJGLr0Oh3Wdf2+K9kOLUFa5Zp7RdTeg==
+  version "2.1.18"
+  resolved "https://registry.yarnpkg.com/@unhead/ssr/-/ssr-2.1.18.tgz#a5d486366f189cfffc382d9d858cc7f113c951b5"
+  integrity sha512-Fg60rTOxvkxtCn5fI2VH13RrlGLb+yXrrzmzbGWNDAV3fI271Onk0DMZehY4/zrvjGRxjwa+A8C2uDuFNmc8Sw==
 
 "@vitest/expect@3.2.3":
   version "3.2.3"
