@@ -917,12 +917,12 @@
   resolved "https://registry.yarnpkg.com/@unhead/dom/-/dom-2.0.10.tgz#1053c4dff7cda5f9fda3b96252cdde95f9e4b804"
   integrity sha512-00I1FFogvb2S2nLjSSpgVRWNuzPoST/mHXxSNddPTOVB9q3+VpTCdWYIhfQFXza1uhdsBioFqEC3nA2qmeUoiw==
 
-"@unhead/react@2.0.10":
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/@unhead/react/-/react-2.0.10.tgz#9484e7ed075546b1e69c24cb2c7c6a172f7b442c"
-  integrity sha512-U5tqhUYk4qmyLD8YpKOuYwWmbIGFpB7aacOzcGAhjJ59GH3W/BSFOFHj/6dcoYV5yzr1CZrINGGH7stRVMMLjQ==
+"@unhead/react@2.1.19":
+  version "2.1.19"
+  resolved "https://registry.yarnpkg.com/@unhead/react/-/react-2.1.19.tgz#2e9a87a88d54f82bf8981965b7ad2873195e6199"
+  integrity sha512-UNLxU5CgyJw6NzTOsxzUr11pX9zyW1DIHXPwkg2/V1zLcwPKPPcpDkx1tRmWmlajPdpSFZli3xmSrEt1HCGSDw==
   dependencies:
-    unhead "2.0.10"
+    unhead "2.1.19"
 
 "@unhead/ssr@^2.0.10":
   version "2.0.10"
@@ -1473,6 +1473,11 @@ entities@^4.2.0:
   resolved "https://registry.yarnpkg.com/entities/-/entities-4.5.0.tgz#5d268ea5e7113ec74c4d033b79ea5a35a488fb48"
   integrity sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==
 
+entities@^6.0.0:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/entities/-/entities-6.0.1.tgz#c28c34a43379ca7f61d074130b2f5f7020a30694"
+  integrity sha512-aN97NXWF6AWBTahfVOIrB/NShkzi5H7F9r1s9mD3cDj4Ko5f2qhhVoYMibXF7GlLveb/D2ioWay8lxI97Ven3g==
+
 environment@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/environment/-/environment-1.1.0.tgz#8e86c66b180f363c7ab311787e0259665f45a9f1"
@@ -1868,6 +1873,11 @@ hookable@^5.5.3:
   version "5.5.3"
   resolved "https://registry.yarnpkg.com/hookable/-/hookable-5.5.3.tgz#6cfc358984a1ef991e2518cb9ed4a778bbd3215d"
   integrity sha512-Yc+BQe8SvoXH1643Qez1zqLRmbA5rCL+sSmk6TVos0LWVfNIB7PGncdlId77WzLGSIB5KaWgTaNTs2lNVEI6VQ==
+
+hookable@^6.0.1:
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/hookable/-/hookable-6.1.2.tgz#9d0c83e2888bac07b6982e3a3068d5861e2ee5a2"
+  integrity sha512-+abwxtiEA52GCVIsQqut3S/uKTbUwYIp4Pe/vv+6py5XiXBCqMZHg6pA6Y5qhgLSEys0/cYuPbO0z1QFj5ZCmg==
 
 husky@9.1.7:
   version "9.1.7"
@@ -2820,6 +2830,13 @@ parse-entities@^4.0.0:
     is-decimal "^2.0.0"
     is-hexadecimal "^2.0.0"
 
+parse5@^7.3.0:
+  version "7.3.0"
+  resolved "https://registry.yarnpkg.com/parse5/-/parse5-7.3.0.tgz#d7e224fa72399c7a175099f45fc2ad024b05ec05"
+  integrity sha512-IInvU7fabl34qmi9gY8XOVxhYyMyuH2xUNpb2q8/Y+7552KlejkRvqvD19nMoUW/uQGGbqNpA6Tufu5FL5BZgw==
+  dependencies:
+    entities "^6.0.0"
+
 pathe@^2.0.1, pathe@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/pathe/-/pathe-2.0.3.tgz#3ecbec55421685b70a9da872b2cff3e1cbed1716"
@@ -3432,6 +3449,14 @@ unhead@2.0.10:
   integrity sha512-GT188rzTCeSKt55tYyQlHHKfUTtZvgubrXiwzGeXg6UjcKO3FsagaMzQp6TVDrpDY++3i7Qt0t3pnCc/ebg5yQ==
   dependencies:
     hookable "^5.5.3"
+
+unhead@2.1.19:
+  version "2.1.19"
+  resolved "https://registry.yarnpkg.com/unhead/-/unhead-2.1.19.tgz#8359ca14de207cff630c1dfd6e4dc8d8f7e15f04"
+  integrity sha512-W+zxYQeulbi738I839IQFxOgdAzkNWLrNdaK0XmRGAqcDhojlFufESM7d/IeaMwPmue1rff27Sdl6NNckZqrrQ==
+  dependencies:
+    hookable "^6.0.1"
+    parse5 "^7.3.0"
 
 unified@^11.0.0:
   version "11.0.5"
