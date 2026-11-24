@@ -912,10 +912,10 @@
     unplugin "^2.3.4"
     unplugin-ast "^0.15.0"
 
-"@unhead/dom@2.0.10":
-  version "2.0.10"
-  resolved "https://registry.yarnpkg.com/@unhead/dom/-/dom-2.0.10.tgz#1053c4dff7cda5f9fda3b96252cdde95f9e4b804"
-  integrity sha512-00I1FFogvb2S2nLjSSpgVRWNuzPoST/mHXxSNddPTOVB9q3+VpTCdWYIhfQFXza1uhdsBioFqEC3nA2qmeUoiw==
+"@unhead/dom@2.1.19":
+  version "2.1.19"
+  resolved "https://registry.yarnpkg.com/@unhead/dom/-/dom-2.1.19.tgz#5e1819aae15f22fb0cbe09f77d8ed5d221aad136"
+  integrity sha512-HZS+9kYzo+L1LaZt+TcAO4Sc/BfH/BxxmrHXsH9ofZm/Yz3qOSdPfPlfitEnSNCtuWfJYZwpzi/lTqOdaG2SbA==
 
 "@unhead/react@2.0.10":
   version "2.0.10"
